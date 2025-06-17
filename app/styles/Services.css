@@ -1,0 +1,25 @@
+.services {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services__list {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.services__li {
+    width: 24%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

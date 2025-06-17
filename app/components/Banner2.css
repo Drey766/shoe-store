@@ -1,0 +1,63 @@
+.banner2 {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.banner-container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner-text {
+    z-index: 1;
+    color: black;
+    text-align: left;
+    position: relative;
+
+}
+
+.banner-heading {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.banner-p {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 30px;
+    width: 80%;
+    line-height: 1.5;
+}
+
+.banner-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    height: 50px;
+    width: 150px;
+}

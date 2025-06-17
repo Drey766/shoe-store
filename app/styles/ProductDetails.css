@@ -1,0 +1,145 @@
+.productDetails {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.productDetails--container {
+    width: 90%;
+    height: max-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.productDetails--imagesContainer {
+    width: 47%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.thumbnailContainer {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+}
+
+.mainImageContainer {
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainImage {
+    height: 100% !important;
+}
+
+
+
+
+
+
+.productDetails--details {
+    width: 45%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.productDetils--title {
+    width: 100%;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.productDetils--currentPrice {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: maroon;
+    margin-bottom: 15px;
+}
+
+.productDetials--text {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: left;
+    color: grey;
+}
+
+.productDetials--brandName, .productDetials--color {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.productDetials--brandNameSpan, .productDetials--colorSpan {
+    font-weight: 400;
+    margin-left: 10px;
+    color: grey;
+}
+
+.addToCartBtn {
+    width: 150px !important;
+    height: 50px !important;
+    background-color: maroon !important;
+    color: white !important;
+    font-size: 1rem ;
+    font-weight: 600 !important;
+    border: 1px solid maroon !important;
+    cursor: pointer !important;
+    margin-top: 20px;
+    transition: all 0.3s ease-out;
+}
+
+.addToCartBtn:hover {
+    background-color: transparent !important;
+    color: black !important;
+}
+
+
+
+.productDetail--simlarProducts {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.productDetail--simlarContainer {
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

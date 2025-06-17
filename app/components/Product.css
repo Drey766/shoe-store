@@ -1,0 +1,120 @@
+
+
+.product {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.product__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.product__text1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 60%;
+    
+}
+
+.product__imgDivLink {
+    width: 100%;
+    z-index: 99;
+
+}
+
+.product__imgDiv {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: max-content;
+    min-height: 420px;
+    width: 100%;
+    /* Your existing styles for the image container */
+  }
+
+.product__img1 {
+    object-fit: contain;
+    width: 100%;
+    min-height: 100px;
+    max-height: 100%;
+    min-width: 100px;
+    object-fit: cover;
+    transition: all .3s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.product__img2 {
+    object-fit: contain;
+    width: 100%;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 100%;
+    object-fit: cover;
+    transition: all .3s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+.product__imgDiv > img:hover {
+    transition: all .3s ease-out;
+}
+
+.product:hover .product__img1 {
+    opacity: 0; /* Adjust the opacity on hover as needed */
+    
+}
+
+.product:hover .product__img2 {
+    opacity: 1;/* Adjust the opacity on hover as needed */
+    
+}
+
+h4 {
+    text-align: left;
+    color: black;
+    text-decoration: none !important;
+    font-weight: 550;
+}
+
+.h4__cont {
+    text-decoration: none;
+    width: 100%;
+    z-index: 99;
+}
+
+.product__addButton {
+    background-color: black !important;
+    border: 1px solid !important;
+    border-color: #a88734 #9c7e31 #846a29 !important;
+    color: white !important;
+    font-weight: 500 !important;
+    font-size: 0.6rem !important;
+    padding: 10px !important;
+    transition: all .3s ease !important;
+}
+
+.product__addButton:hover {
+    background: #ff4545 !important;
+}
+
+.product__price{
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: black;
+}

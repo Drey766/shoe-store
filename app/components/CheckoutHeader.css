@@ -1,0 +1,47 @@
+.checkoutHeader {
+    height: 30vh;
+    min-height: max-content;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.checkoutHeader__cont {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkoutHeader__title {
+    font-size: 3.7rem;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+}
+
+.checkoutHeader__links {
+    width: max-content;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.checkoutHeader__link {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 464px) {
+    .checkoutHeader__title {
+        font-size: 2.8rem;
+    }
+}

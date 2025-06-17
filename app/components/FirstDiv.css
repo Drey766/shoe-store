@@ -1,0 +1,64 @@
+.firstDiv {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.firstDiv__prevButton {
+    position: absolute !important;
+    left: 5% !important;
+    top: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey !important;
+    cursor: pointer;
+
+}
+
+.firstDiv__nextButton {
+    position: absolute !important;
+    right: 5% !important;
+    top: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey !important;
+    cursor: pointer;
+}
+
+.firstDiv__dots {
+    width: 4%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstDiv__dot {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.firstDiv__dot.active {
+    /* Your styles for the active dot */
+    background-color: #fff;
+    opacity: 1;
+    /* Or any other styles you want for the active state */
+  }
+
+
+  @media screen and (max-width: 400px) {
+    .firstDiv__dots {
+        width: 15%;
+        bottom: 5% !important;
+    }
+  }
