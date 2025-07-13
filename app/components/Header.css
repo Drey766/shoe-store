@@ -122,12 +122,12 @@
   
   .nav-item:hover:after {
     width: 100%;
-    background: #ff4545;
+    background: #ce0306;
   }
   
   .nav-item.active {
-    color: #ff4545;
-    border: #ff4545;
+    color: #ce0306;
+    border: #ce0306;
     
   }
   
@@ -167,11 +167,11 @@
   }
 
   .header__links:hover  {
-    color: #ff4545 !important;
+    color: #ce0306 !important;
   }
 
   .nav__basket:hover {
-    color: #ff4545 !important;
+    color: #ce0306 !important;
   }
 
   .sticky {

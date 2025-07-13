@@ -1,0 +1,157 @@
+.shop {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shopContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shopHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.shopProducts {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.shopFilters {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.shopShoesContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.shopFilters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.shopFiltersHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.shopFiltersTitle {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+}
+
+.shopFiltersReset {
+    background-color: #ce0306 !important;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+
+.shopFilterItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.shopFilterLabel {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.shopFilterOptions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.shopFilterOption {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.shopCheckboxInput {
+    margin-right: 10px;
+    background-color: white !important;
+    color: #ce0306 !important;
+}
+
+
+.shopShoes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.shopPagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    padding: 20px 0;
+}
+
+.shopPaginationButton {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+    color: black;
+}

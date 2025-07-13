@@ -11,7 +11,7 @@ import Image from 'next/image'
 function Highlights() {
 
   return (
-    <div className='highlights' >
+    <section className='highlights' >
       <div className='highlights__container'>
         <div className='highlights__conts'>
           <div className='highlight__divs1' id='highlights__divs1'>
@@ -48,7 +48,7 @@ function Highlights() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

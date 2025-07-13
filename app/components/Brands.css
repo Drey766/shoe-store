@@ -29,5 +29,49 @@
     padding-bottom: 5px;
 }
 
+@media screen and (max-width: 850px) {
+    .brands__title {
+        width: 80%;
+        font-size: 1.8rem;
+    }
+
+    .brands__container {
+        width: 100%;
+    }
+
+    .react-multi-carousel-list {
+        width: 100%;
+    }
+
+    .brand__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 464px) {
+    .brands__title {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .brands__container {
+        width: 100%;
+    }
+
+    .react-multi-carousel-list {
+        width: 100%;
+    }
+
+    .brand__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
 
 

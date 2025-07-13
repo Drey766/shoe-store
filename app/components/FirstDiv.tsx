@@ -48,7 +48,7 @@ function FirstDiv() {
   const currentItem = texts[currentIndex];
 
   return (
-    <div className='firstDiv'>
+    <section className='firstDiv'>
       <CarouselItem 
         key={currentItem.id}
         id={currentItem.id}
@@ -69,7 +69,7 @@ function FirstDiv() {
           ></span>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

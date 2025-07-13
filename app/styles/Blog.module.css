@@ -1,0 +1,125 @@
+/* blog-detail.css */
+.blogDetail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.blogDetailContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogDetailBackContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.blogDetailBack {
+  display: inline-block;
+  color: #ce0306;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all .3s ease-out;
+
+  &:hover {
+    color: #0066cc;
+  }
+}
+
+.blogDetailBack:hover {
+  text-decoration: underline;
+}
+
+.blogDetailArticle {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.blogDetailHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.blogDetailTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.blogDetailImageContainer {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.blogDetailImage {
+  height: 100%;
+  object-fit: contain;
+}
+
+.blogDetailContent {
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: left;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .blogDetailContainer {
+        width: 90%;
+    }
+
+    .blogDetailArticle {
+        padding: 10px;
+    }
+
+    .blogDetailTitle {
+        font-size: 2rem;
+    }
+
+    .blogDetailContent {
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .blogDetailContainer {
+        width: 95%;
+    }
+
+    .blogDetailTitle {
+        font-size: 1.5rem;
+    }
+
+    .blogDetailContent {
+        font-size: 0.9rem;
+    }
+    
+}

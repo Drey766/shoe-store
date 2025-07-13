@@ -87,6 +87,7 @@ function CarouselItem({id, image, title, desc, position, color}: CarouselItemPro
                                     animate="visible"
                                     exit="hidden"
                                     transition={{ duration: 0.5, delay: 0.4, ease: easeOut }}
+                                    style={{color: `${color}`, border: `2px solid ${color}`}}
                                 >
                                     Discover
                                 </motion.button>

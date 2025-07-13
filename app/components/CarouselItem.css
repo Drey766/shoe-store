@@ -76,14 +76,61 @@
 }
 
 .carouselItem__button {
-    color: white !important;
-    border: 1px solid white !important;
     width: 120px;
-    font-weight: 700 !important;
-    margin-top: 30px !important;
+    font-weight: 600;
+    margin-top: 30px;
     background-color: transparent;
-    height: 30px
+    height: 38px;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-out;
 }
+
+.carouselItem__button:hover {
+    background-color: #ce0306 !important;
+    color: white !important;
+    border-color: #ce0306 !important;
+}
+
+
+@media screen and (max-width: 850px) {
+    .react-parallax-content {
+        justify-content: center;
+    }
+    .carouselItem__text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .carouselItem__title {
+        font-size: 2.5rem;
+    }
+
+    .carouselItem__p {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .carouselItem__button {
+        width: 100px;
+        font-size: .6rem;
+    }
+
+    .carouselItem__p {
+        text-align: center;
+    }
+
+    .firstDiv__dots {
+        width: 7%;
+    }
+    
+}
+
 
 @media screen and (max-width: 450px) {
     .carouselItem {
@@ -96,5 +143,13 @@
 
     .carouselItem__p {
         width: 80%;
+    }
+
+    .carouselItem__title {
+        font-size: 2.3rem;
+    }
+
+    .firstDiv__dots {
+        width: 10%;
     }
 }

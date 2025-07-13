@@ -49,7 +49,7 @@ function NavBar(starter)  {
                 {click ? <Clear /> : <Menu />}
               </div>
               <span className="nav-logo">
-                <Link href='/'><img id='logo' src={logo} alt='logo' /></Link>
+                <Link href='/'>Shoes</Link>
               </span>
               <div className='navMenu__cont'>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -60,7 +60,7 @@ function NavBar(starter)  {
                     <Link href='/shop' className='header__links'><span className="nav-links">Shop</span></Link>
                   </li>
                   <li className="nav-item" onClick={scrollToPortfolio}>
-                    <Link href='/explore' className='header__links'><span className="nav-links">Explore</span></Link>
+                    <Link href='/blog' className='header__links'><span className="nav-links">Blog</span></Link>
                   </li>
                   <li className="nav-item" onClick={scrollToContact}>
                     <span className="nav-links">Contact Us</span>

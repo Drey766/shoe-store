@@ -1,9 +1,11 @@
 
 'use client'; // <- Add this at the top!
 
+import Blog from './components/Blogs';
 import Brands from './components/Brands';
 import FirstDiv from './components/FirstDiv';
 import Highlights from './components/Highlights';
+import Newsletter from './components/Newsletter';
 import Products from './components/Products';
 import Services from './components/Services';
 import { useBasket, useUser, useProducts } from './context/StateProvider';
@@ -42,6 +44,8 @@ export default function Home() {
       <Highlights />
       <Products />
       <Services />
+      <Blog />
+      <Newsletter />
     </div>
   );
 }

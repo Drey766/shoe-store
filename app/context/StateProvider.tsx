@@ -234,7 +234,9 @@ export const useProducts = () => {
     return {
       id: product.id,
       name: product.name,
-      price: product.price.current.value,
+      price: typeof product.price === 'object' && product.price !== null && 'current' in product.price
+        ? (product.price as { current: { value: number } }).current.value
+        : (product.price as number),
       imageUrl: product.imageUrl,
       colour: product.color,
       brandName: product.brandName,

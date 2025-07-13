@@ -18,7 +18,7 @@ function Carousels({ catalogue, title }: CarouselsProps) {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 3,
+    items: 2,
     slidesToSlide: 1 // optional, default to 1.
   },
   mobile: {
@@ -47,13 +47,12 @@ function Carousels({ catalogue, title }: CarouselsProps) {
               autoPlay={true}
               autoPlaySpeed={2000}
               keyBoardControl={true}
-              customTransition="all .5 ease-out"
-              transitionDuration={5000}
+              transitionDuration={1000}
               containerClass="products-carousel"
               removeArrowOnDeviceType={["tablet", "mobile"]}
               deviceType="desktop"
               dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
+              itemClass="carousels__carouselItem"
               arrows={true}
               className="product__carousel">
               {catalogue.map(product => (

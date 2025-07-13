@@ -16,7 +16,7 @@
     justify-content: flex-start;
 }
 
-.banner-image {
+.banner-imageContainer {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -60,4 +60,28 @@
     font-size: 1.1rem;
     height: 50px;
     width: 150px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .banner-heading {
+        font-size: 2.5rem;
+    }
+
+    .banner-p {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    .banner-button {
+        width: 120px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .bannerImage {
+        width: 100%;
+        object-fit: cover;
+    }
+    
 }

@@ -28,6 +28,7 @@
     justify-content: center;
     color: grey !important;
     cursor: pointer;
+    z-index: 999 !important;
 }
 
 .firstDiv__dots {

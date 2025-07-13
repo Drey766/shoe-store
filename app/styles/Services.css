@@ -23,3 +23,30 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 900px) {
+    .services__list {
+        width: 90%;
+    }
+    
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .services {
+        height: max-content;
+    }
+
+    .services__list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services__li {
+        width: 80%;
+        margin-bottom: 25px;
+    }
+    
+}
+

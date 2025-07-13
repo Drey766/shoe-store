@@ -68,7 +68,7 @@
 }
 
 #highlights__divs1 > .highlights__text > .highlights__span:hover::before {
-    background: #ff4545;
+    background: #ce0306;
 }
 
 .highlights__text {
@@ -103,7 +103,7 @@ h3 {
 }
 
 .highlights__spanLink:hover {
-    color: #ff4545;
+    color: #ce0306;
 }
 
 .highlights__span {
@@ -130,12 +130,12 @@ h3 {
   }
 
 .highlights__span:hover {
-    color: #ff4545;
+    color: #ce0306;
 }
   
 .highlights__span:hover::before {
     width: 50%;
-    background: #ff4545;
+    background: #ce0306;
   }
 
   @media screen and (max-width: 464px) {

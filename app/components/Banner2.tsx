@@ -12,8 +12,8 @@ function Banner2() {
                 <p className='banner-p'>Shop our new collection and elevate your style.</p>
                 <button className="banner-button">Shop Now</button>
             </div>
-            <div className="banner-image">
-                <Image height={700} width={1903} src={bannerImage} alt="Banner Image" />
+            <div className="banner-imageContainer">
+                <Image height={600} width={1740} src={bannerImage} alt="Banner Image" className='bannerImage' />
             </div>
         </div>
     </div>

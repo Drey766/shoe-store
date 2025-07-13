@@ -27,7 +27,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding-bottom: 10px;
     position: relative;
 }
@@ -39,5 +39,26 @@
     bottom: 0;
     width: 30%;
     height: 3px;
-    background-color: maroon;
+    background-color: #ce0306;
+}
+
+@media screen and (max-width: 1024px) {
+    .carousels-title {
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .carousels-carouselCont {
+        width: 100%;
+    }
+
+    .carousels-carousel {
+        width: 100%;
+    }
+
+    .carousels__carouselItem {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
 }

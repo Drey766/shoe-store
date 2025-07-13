@@ -53,7 +53,7 @@ export default function Products() {
   
   return (
     <>
-      <div className="products">
+      <section className="products">
           <div className='products__container'>
             
             <Carousels catalogue={products} title={'Latest Products'} />
@@ -61,7 +61,7 @@ export default function Products() {
             <Banner2 />
             <Carousels catalogue={products} title={'2025 Collection'} />
           </div>
-      </div>
+      </section>
     </>
   );
 }

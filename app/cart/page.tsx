@@ -5,6 +5,10 @@ import React, { useMemo } from 'react';
 import { useBasket } from '../context/StateProvider'; // Adjust path as needed
 import { BasketItem } from '../types/index'; // Adjust path as needed
 import Image from 'next/image';
+import Link from 'next/link';
+import styles from '@/app/styles/Cart.module.css'
+import CheckoutHeader from '../components/CheckoutHeader';
+import { Delete } from '@mui/icons-material';
 
 const EnhancedCartPage: React.FC = () => {
   const { basket, removeFromBasket, addToBasket } = useBasket();
@@ -51,15 +55,15 @@ const EnhancedCartPage: React.FC = () => {
 
   if (groupedItems.length === 0) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
-        <div className="text-center py-16">
-          <div className="text-6xl mb-4">🛒</div>
-          <h2 className="text-xl text-gray-600 mb-4">Your cart is empty</h2>
-          <p className="text-gray-500 mb-8">Add some items to get started!</p>
+      <div className="">
+        <h1 className="">Your Cart</h1>
+        <div className="">
+          <div className="">🛒</div>
+          <h2 className="">Your cart is empty</h2>
+          <p className="">Add some items to get started!</p>
           <a 
             href="/" 
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block"
+            className=""
           >
             Continue Shopping
           </a>
@@ -69,140 +73,132 @@ const EnhancedCartPage: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold">Your Cart</h1>
-        <a 
-          href="/" 
-          className="text-blue-600 hover:underline flex items-center"
-        >
-          ← Continue Shopping
-        </a>
-      </div>
+    <div className={styles.cart}>
+      <CheckoutHeader title='Cart' link='/cart' linkTitle='cart' />
+      <div className={styles.cartContainer}>
+        <div className={styles.cartHeader}>
+          <h1 className={styles.cartTitle}>Your Cart</h1>
+          <Link
+            href="/"
+            className={styles.cartContinueShopping}
+          >
+            ← Continue Shopping
+          </Link>
+        </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Cart Items */}
-        <div className="lg:col-span-2">
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="p-6 border-b">
-              <h2 className="text-xl font-semibold">
-                Cart Items ({groupedItems.reduce((total, item) => total + item.totalQuantity, 0)})
-              </h2>
-            </div>
-            
-            <div className="divide-y">
+        <div className={styles.cartItemsContainer}>
+          <div className={styles.cartItemsWrapper}>
+            <div className={styles.cartItems}>
               {groupedItems.map((item) => (
-                <div key={item.id} className="p-6 flex items-center space-x-4">
+                <div key={item.id} className={styles.cartItem}>
                   {/* Product Image */}
-                  <div className="w-24 h-24 flex-shrink-0">
-                    <img
-                      src={item.imageUrl}
+                  <div className={styles.cartItemImageContainer}>
+                    <Image
+                      height={100}
+                      width={78}
+                      src={`https://${item.imageUrl}`}
                       alt={item.name}
-                      className="w-full h-full object-cover rounded-md"
+                      className={styles.cartItemImage}
                     />
                   </div>
-                  
+      
                   {/* Product Details */}
-                  <div className="flex-grow min-w-0">
-                    <h3 className="font-semibold text-lg truncate">{item.name}</h3>
-                    <p className="text-gray-600">{item.brandName}</p>
-                    {item.colour && (
-                      <p className="text-sm text-gray-500">Color: {item.colour}</p>
-                    )}
-                    <p className="text-lg font-semibold text-green-600 mt-1">
-                      ${item.price.toFixed(2)}
-                    </p>
-                  </div>
-                  
-                  {/* Quantity Controls */}
-                  <div className="flex items-center space-x-3">
-                    <div className="flex items-center border rounded-md">
+                  <div className={styles.cartItemDetailsContainer}>
+                    <div className={styles.cartItemDetails}>
+                      <h3 className={styles.cartItemName}>{item.name}</h3>
+                      {item.colour && (
+                        <p className="">Color: {item.colour}</p>
+                      )}
+                      <p className={styles.cartItemPrice}>
+                        ${item.price.toFixed(2)}
+                      </p>
+                    </div>
+                    {/* Quantity Controls */}
+                    <div className={styles.cartItemQuantity}>
+                      <div className={styles.quantityControls}>
+                        <button
+                          onClick={() => updateQuantity(item, item.totalQuantity - 1)}
+                          className={styles.quantityButton}
+                          disabled={item.totalQuantity <= 1}
+                        >
+                          -
+                        </button>
+                        <span className={styles.quantityDisplay}>
+                          {item.totalQuantity}
+                        </span>
+                        <button
+                          onClick={() => updateQuantity(item, item.totalQuantity + 1)}
+                          className={styles.quantityButton}
+                        >
+                          +
+                        </button>
+                      </div>
                       <button
-                        onClick={() => updateQuantity(item, item.totalQuantity - 1)}
-                        className="px-3 py-1 hover:bg-gray-100 disabled:opacity-50"
-                        disabled={item.totalQuantity <= 1}
+                        onClick={() => removeAllOfItem(item.id)}
+                        className={styles.cartRemoveButton}
                       >
-                        -
-                      </button>
-                      <span className="px-3 py-1 min-w-[40px] text-center">
-                        {item.totalQuantity}
-                      </span>
-                      <button
-                        onClick={() => updateQuantity(item, item.totalQuantity + 1)}
-                        className="px-3 py-1 hover:bg-gray-100"
-                      >
-                        +
+                        <Delete />
                       </button>
                     </div>
                   </div>
-                  
+      
                   {/* Item Total and Remove */}
-                  <div className="text-right">
-                    <p className="text-lg font-semibold">
+                  <div className="">
+                    <p className="">
                       ${(item.price * item.totalQuantity).toFixed(2)}
                     </p>
-                    <button
-                      onClick={() => removeAllOfItem(item.id)}
-                      className="text-red-600 hover:text-red-800 text-sm mt-2 underline"
-                    >
-                      Remove
-                    </button>
+                    
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        
+      
         {/* Cart Summary */}
-        <div className="lg:col-span-1">
-          <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
-            <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
-            
-            <div className="space-y-3">
-              <div className="flex justify-between">
+        <div className={styles.cartSummary}>
+          <div className={styles.cartSummaryContainer}>
+            <h2 className={styles.cartSummaryTitle} >Order Summary</h2>
+      
+            <div className={styles.cartSummaryDetails}>
+              <div className={styles.cartSummaryItem}>
                 <span>Subtotal</span>
                 <span>${basketTotal.toFixed(2)}</span>
               </div>
-              
-              <div className="flex justify-between">
+      
+              <div className={styles.cartSummaryItem}>
                 <span>Shipping</span>
-                <span className="text-green-600">
-                  {basketTotal > 50 ? 'Free' : '$5.99'}
+                <span className="">
+                  {basketTotal > 200 ? 'Free' : '$5.99'}
                 </span>
               </div>
-              
-              <div className="flex justify-between">
+      
+              <div className={styles.cartSummaryItem}>
                 <span>Tax (8%)</span>
                 <span>${(basketTotal * 0.08).toFixed(2)}</span>
               </div>
-              
-              {basketTotal > 50 && (
-                <div className="text-sm text-green-600 bg-green-50 p-2 rounded">
+      
+              {basketTotal > 200 && (
+                <div className={styles.cartSummaryFreeShipping}>
                   🎉 You qualify for free shipping!
                 </div>
               )}
-              
-              <hr className="my-3" />
-              
-              <div className="flex justify-between text-xl font-bold">
+      
+              <hr className="" />
+      
+              <div className={styles.cartSummaryTotal}>
                 <span>Total</span>
                 <span>
-                  ${(basketTotal + (basketTotal > 50 ? 0 : 5.99) + (basketTotal * 0.08)).toFixed(2)}
+                  ${(basketTotal + (basketTotal > 200 ? 0 : 5.99) + (basketTotal * 0.08)).toFixed(2)}
                 </span>
               </div>
             </div>
-            
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg mt-6 hover:bg-blue-700 transition-colors font-semibold">
+      
+            <Link href="/checkout"className={styles.cartCheckoutButton}>
               Proceed to Checkout
-            </button>
-            
-            <div className="mt-4 text-center">
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
-                <span>🔒</span>
-                <span>Secure checkout</span>
-              </div>
-            </div>
+            </Link>
+      
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@
 
 .activeCategory::after {
     content: '';
-    background: #ff4545;
+    background: #ce0306;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -64,7 +64,7 @@
 }
 
 .catalogue__li:hover::after {
-    background: #ff4545;
+    background: #ce0306;
     width: 100%;
 }
 

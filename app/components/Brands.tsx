@@ -34,7 +34,7 @@ export default function Brands(props: { deviceType: string }) {
 
 
   return (
-    <div className="brands">
+    <section className="brands">
       <div className="brands__container">
         <span className='brands__title'>Get shoes from your favorite brands:</span>
         <Carousel
@@ -47,8 +47,7 @@ export default function Brands(props: { deviceType: string }) {
           autoPlay={props.deviceType !== "mobile" ? true : false}
           autoPlaySpeed={2000}
           keyBoardControl={true}
-          customTransition="all .5 ease-out"
-          transitionDuration={5000}
+          transitionDuration={2000}
           containerClass="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           deviceType={props.deviceType}
@@ -64,7 +63,7 @@ export default function Brands(props: { deviceType: string }) {
           ))}
       </Carousel>
       </div>
-    </div>
+    </section>
   );
 }
 

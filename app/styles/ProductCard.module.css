@@ -37,7 +37,7 @@
 }
 
 .productDetail__navLink:hover {
-    color: #ff4545;
+    color: #ce0306;
 }
 
 .productDetail__containers1 {
@@ -121,7 +121,7 @@
 .productDetail__p {
     text-align: left;
     font-size: 1.6rem;
-    color: #ff4545;
+    color: #ce0306;
     margin-bottom: 6px;
 }
 
@@ -156,7 +156,7 @@
 }
 
 .productDetail__addButton:hover {
-    background: #ff4545 !important;
+    background: #ce0306 !important;
 }
 
 .similarProducts {

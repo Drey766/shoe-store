@@ -108,13 +108,14 @@
 .addToCartBtn {
     width: 150px !important;
     height: 50px !important;
-    background-color: maroon !important;
+    background-color: #ce0306 !important;
     color: white !important;
     font-size: 1rem ;
     font-weight: 600 !important;
-    border: 1px solid maroon !important;
+    border: 1px solid #ce0306 !important;
     cursor: pointer !important;
     margin-top: 20px;
+    margin-right: 10px !important;
     transition: all 0.3s ease-out;
 }
 
@@ -141,5 +142,42 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .productDetails--container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productDetails--imagesContainer {
+        width: 100%;
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .productDetails--details {
+        width: 100%;
+        height: max-content;
+        margin-top: 20px;
+    }
+
+    .thumbnailContainer {
+        width: 100%;
+        height: 200px;
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+
+    .mainImageContainer {
+        height: 400px;
+    }
+
+    .mainImage {
+        height: 100% !important;
+    }
+    
 }
 
