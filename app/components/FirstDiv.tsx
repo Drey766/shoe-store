@@ -14,7 +14,7 @@ function FirstDiv() {
  const texts = [
   {id: 'premium-shoes', title: 'Premium Shoes', desc: 'Discover the world in unparalleled comfort and luxury', img: img1.src || img1, position: 'flex-end', color: 'black'},
   {id: 'first-class', title: 'New Modern Collection', desc: 'Creating unforgettable moments and exceeding your every expectation.', img: img2.src || img2, position: 'flex-end', color: 'white'},
-  {id: 'safe-drivers', title: '2025 Collections', desc: 'Our experienced drivers are ready to accompany your journey.', img: img3.src || img3, position: 'flex-start', color: 'black'}
+  {id: 'safe-drivers', title: '2025 Collections', desc: 'Get the latest shoes from your favorite brands at affordable prices.', img: img3.src || img3, position: 'flex-start', color: 'black'}
   ]
 
   const handleNext = () => {
